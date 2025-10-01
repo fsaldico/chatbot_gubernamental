@@ -1,11 +1,26 @@
-# Entornos virtuales de Python
+# ============================================
+# ARCHIVOS SENSIBLES - NUNCA SUBIR A GIT
+# ============================================
+.env
+.env.local
+.env.production
+.keys
+secrets.json
+config_private.py
+
+# ============================================
+# ENTORNOS VIRTUALES DE PYTHON
+# ============================================
 venv/
+.venv/
 venv_rasa/
 venv-py311/
 env/
-.venv/
+ENV/
 
-# Archivos de Python
+# ============================================
+# ARCHIVOS DE PYTHON
+# ============================================
 __pycache__/
 *.py[cod]
 *$py.class
@@ -27,35 +42,61 @@ wheels/
 .installed.cfg
 *.egg
 MANIFEST
+pip-log.txt
+pip-delete-this-directory.txt
 
-# Rasa
+# ============================================
+# RASA - MODELOS Y DATOS
+# ============================================
 models/
 .data/
 results/
 *.tar.gz
+*.model
 
-# Archivos de editor
+# ============================================
+# ARCHIVOS DE EDITORES/IDEs
+# ============================================
 .vscode/
-.idea
+.idea/
 *.swp
 *.swo
+*~
 
-# Sistema
+# ============================================
+# ARCHIVOS DEL SISTEMA OPERATIVO
+# ============================================
 .DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
 Thumbs.db
+Desktop.ini
 
-# Logs
+# ============================================
+# LOGS Y ARCHIVOS TEMPORALES
+# ============================================
 *.log
 logs/
-
-# Archivos temporales
 *.tmp
 *.temp
+*.cache
 
-# Archivos grandes/Binarios (que ya te causaron problemas)
+# ============================================
+# ARCHIVOS GRANDES/BINARIOS PROBLEMÁTICOS
+# ============================================
 *.dll
 *.pyd
 *.so
-node_modules
-node_modules
-node_modules
+*.dylib
+*.class
+
+# ============================================
+# NODE.JS (si tu proyecto también usa JavaScript)
+# ============================================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*

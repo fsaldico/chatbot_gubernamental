@@ -1,0 +1,38 @@
+# data/nlu.yml
+version: "3.1"
+
+nlu:
+- intent: saludar
+  examples: |
+    - hola
+    - buenos días
+    - buen día
+    - qué tal
+
+- intent: despedir
+  examples: |
+    - chau
+    - adiós
+    - nos vemos
+    - hasta luego
+
+- intent: consultar_saldo_sube
+  examples: |
+    - ¿Cuánto tengo en la [SUBE](tipo_tramite)?
+    - Quiero saber mi saldo de la sube
+    - Saldo SUBE
+    - Consultar saldo
+
+- intent: solicitar_turno
+  examples: |
+    - Quiero sacar un turno
+    - Necesito un turno para el [registro](tipo_tramite)
+    - Cómo saco turno para la [licencia de conducir](tipo_tramite)
+    - Turno para [anses](tipo_tramite)
+
+- intent: informar_problema_calle
+  examples: |
+    - Hay un [bache](tipo_problema) en la [calle Corrientes 123](ubicacion)
+    - Quiero reportar un problema en la calle
+    - Hay un [criadero de mosquitos](tipo_problema) en [Parque Patricios](ubicacion)
+    - Reportar un [semáforo roto](tipo_problema)

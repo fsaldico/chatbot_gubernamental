@@ -1,0 +1,60 @@
+# domain.yml
+
+# Intenciones que el bot puede reconocer (definidas en nlu.yml)
+intents:
+  - saludar
+  - despedir
+  - afirmar
+  - negar
+  - consultar_saldo_sube
+  - solicitar_turno
+  - informar_problema_calle
+  - preguntar_horarios
+  - denunciar_ruido_molesto
+
+# Entidades clave a extraer de los mensajes de los usuarios
+entities:
+  - tipo_tramite
+  - tipo_problema
+  - ubicacion
+  - numero_turno
+
+# Slots para almacenar información durante la conversación
+slots:
+  ubicacion:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: ubicacion
+  tipo_tramite:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: tipo_tramite
+
+# Respuestas predefinidas que el bot puede enviar
+responses:
+  utter_saludar:
+  - text: "¡Hola! Soy tu asistente virtual para trámites de la Ciudad. ¿En qué puedo ayudarte?"
+  utter_despedir:
+  - text: "¡Hasta luego! No dudes en consultarme si necesitas más ayuda."
+  utter_afirmar:
+  - text: "De acuerdo, continuemos."
+  utter_negar:
+  - text: "Entendido, podemos intentarlo de otra manera."
+  utter_preguntar_horarios:
+  - text: "Nuestras oficinas atienden de lunes a viernes de 8 a 14 hs."
+  utter_derivar_agente_humano:
+  - text: "He detectado que tu consulta es compleja. Voy a derivarte con un agente humano para que te ayude. Por favor, espera un momento."
+
+# Acciones que el bot puede realizar, incluyendo acciones personalizadas
+actions:
+  - utter_saludar
+  - utter_despedir
+  - utter_afirmar
+  - utter_negar
+  - utter_preguntar_horarios
+  - utter_derivar_agente_humano
+  - action_consultar_saldo_sube
+  - action_solicitar_turno
+  - action_informar_problema_calle

@@ -1,0 +1,18 @@
+# data/stories.yml
+version: "3.1"
+
+stories:
+- story: Consultar saldo SUBE
+  steps:
+  - intent: consultar_saldo_sube
+  - action: action_consultar_saldo_sube
+
+- story: Solicitar turno para trámite
+  steps:
+  - intent: solicitar_turno
+  - action: action_solicitar_turno
+
+- story: Reportar problema en la vía pública
+  steps:
+  - intent: informar_problema_calle
+  - action: action_informar_problema_calle

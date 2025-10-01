@@ -1,0 +1,13 @@
+# data/rules.yml
+version: "3.1"
+
+rules:
+- rule: Saludo
+  steps:
+  - intent: saludar
+  - action: utter_saludar
+
+- rule: Despedida
+  steps:
+  - intent: despedir
+  - action: utter_despedir
